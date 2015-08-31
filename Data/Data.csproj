@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{374B245D-B82D-4ADB-85B4-81CDB3966295}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201508301632288_AddedSystems.cs" />
+    <Compile Include="Migrations\201508301632288_AddedSystems.Designer.cs">
+      <DependentUpon>201508301632288_AddedSystems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301636391_AddedIdentityForNamedEntities.cs" />
+    <Compile Include="Migrations\201508301636391_AddedIdentityForNamedEntities.Designer.cs">
+      <DependentUpon>201508301636391_AddedIdentityForNamedEntities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301640035_SystemPopulationNullable.cs" />
+    <Compile Include="Migrations\201508301640035_SystemPopulationNullable.Designer.cs">
+      <DependentUpon>201508301640035_SystemPopulationNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301804044_StationsAdded.cs" />
+    <Compile Include="Migrations\201508301804044_StationsAdded.Designer.cs">
+      <DependentUpon>201508301804044_StationsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301805555_SystemNeedsPermitNullable.cs" />
+    <Compile Include="Migrations\201508301805555_SystemNeedsPermitNullable.Designer.cs">
+      <DependentUpon>201508301805555_SystemNeedsPermitNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301810574_NamesEntitiesIndexes.cs" />
+    <Compile Include="Migrations\201508301810574_NamesEntitiesIndexes.Designer.cs">
+      <DependentUpon>201508301810574_NamesEntitiesIndexes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301856074_StationMaxLandingPadSizeNullable.cs" />
+    <Compile Include="Migrations\201508301856074_StationMaxLandingPadSizeNullable.Designer.cs">
+      <DependentUpon>201508301856074_StationMaxLandingPadSizeNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301913218_StationMaxLandingPadSizeString.cs" />
+    <Compile Include="Migrations\201508301913218_StationMaxLandingPadSizeString.Designer.cs">
+      <DependentUpon>201508301913218_StationMaxLandingPadSizeString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301915592_ManyToManyId.cs" />
+    <Compile Include="Migrations\201508301915592_ManyToManyId.Designer.cs">
+      <DependentUpon>201508301915592_ManyToManyId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301918048_ManyToManyInverse.cs" />
+    <Compile Include="Migrations\201508301918048_ManyToManyInverse.Designer.cs">
+      <DependentUpon>201508301918048_ManyToManyInverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508301949558_ListingsAdded.cs" />
+    <Compile Include="Migrations\201508301949558_ListingsAdded.Designer.cs">
+      <DependentUpon>201508301949558_ListingsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stations\Listing.cs" />
+    <Compile Include="Stations\Station.cs" />
+    <Compile Include="Stations\StationType.cs" />
+    <Compile Include="Systems\Allegiance.cs" />
+    <Compile Include="Commodities\Commodity.cs" />
+    <Compile Include="Commodities\CommodityAveragePrice.cs" />
+    <Compile Include="Commodities\CommodityCategory.cs" />
+    <Compile Include="Db.cs" />
+    <Compile Include="Systems\Economy.cs" />
+    <Compile Include="Systems\Faction.cs" />
+    <Compile Include="Systems\Government.cs" />
+    <Compile Include="Migrations\201508301522447_Initial.cs" />
+    <Compile Include="Migrations\201508301522447_Initial.Designer.cs">
+      <DependentUpon>201508301522447_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="INamedEntity.cs" />
+    <Compile Include="Systems\PowerControlFaction.cs" />
+    <Compile Include="Systems\Security.cs" />
+    <Compile Include="Systems\State.cs" />
+    <Compile Include="Systems\System.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201508301522447_Initial.resx">
+      <DependentUpon>201508301522447_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301632288_AddedSystems.resx">
+      <DependentUpon>201508301632288_AddedSystems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301636391_AddedIdentityForNamedEntities.resx">
+      <DependentUpon>201508301636391_AddedIdentityForNamedEntities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301640035_SystemPopulationNullable.resx">
+      <DependentUpon>201508301640035_SystemPopulationNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301804044_StationsAdded.resx">
+      <DependentUpon>201508301804044_StationsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301805555_SystemNeedsPermitNullable.resx">
+      <DependentUpon>201508301805555_SystemNeedsPermitNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301810574_NamesEntitiesIndexes.resx">
+      <DependentUpon>201508301810574_NamesEntitiesIndexes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301856074_StationMaxLandingPadSizeNullable.resx">
+      <DependentUpon>201508301856074_StationMaxLandingPadSizeNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301913218_StationMaxLandingPadSizeString.resx">
+      <DependentUpon>201508301913218_StationMaxLandingPadSizeString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301915592_ManyToManyId.resx">
+      <DependentUpon>201508301915592_ManyToManyId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301918048_ManyToManyInverse.resx">
+      <DependentUpon>201508301918048_ManyToManyInverse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508301949558_ListingsAdded.resx">
+      <DependentUpon>201508301949558_ListingsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
